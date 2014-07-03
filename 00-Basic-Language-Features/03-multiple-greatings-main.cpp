@@ -1,7 +1,9 @@
 // Greet in a loop
 //
-// Topic: for, 
+// Topic: for, offset aritmetc, no range checking
 //
+// Warning: C++ does what you tell it
+//      e.g.  argc = 3;
 #include <iostream>
 
 using namespace std;
