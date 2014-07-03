@@ -4,18 +4,22 @@
 
 
 struct A {
+    A(int v=-1) :a_(v) {}
     int a_;
 };
 
 struct B0 : public A {
+    B0( int v = 10) : A(v-10), b_(v) {}
     int b_;
 };
 
 struct B1 : public A {
+    B1( int v = 11) : A(v-10), b_(v) {}
     int b_;
 };
 
 struct C : public B0, B1 {
+    C( int v = 100) : B0(v-90), B1(v-90+1), c_(v) {}
     int c_;
 };
 
