@@ -24,14 +24,22 @@ using std::endl;
 
 int main()
 {
-    cout << SIZE_INFO( int* ) << std::endl;
-    cout << SIZE_INFO( void* ) << std::endl;
-    cout << SIZE_INFO( A* ) << std::endl;
-    cout << SIZE_INFO( A ) << std::endl;
-    cout << SIZE_INFO( B0* ) << std::endl;
-    cout << SIZE_INFO( B0 ) << std::endl;
-    cout << SIZE_INFO( B1* ) << std::endl;
-    cout << SIZE_INFO( B1 ) << std::endl;
-    cout << SIZE_INFO( C* ) << std::endl;
-    cout << SIZE_INFO( C ) << std::endl;
+    cout << "Basic types: " << endl;
+    cout << SIZE_INFO( int ) << endl;
+    cout << "Classes: " << endl;
+    cout << SIZE_INFO( A ) << endl;
+    cout << SIZE_INFO( B0 ) << endl;
+    cout << SIZE_INFO( B1 ) << endl;
+    cout << SIZE_INFO( C ) << endl;
+    cout << endl;
+
+    cout << "Pointer types: " << endl;
+    cout << "Basic types: " << endl
+            << SIZE_INFO( int* ) << endl
+            << SIZE_INFO( void* ) << endl;
+    cout << "Classes: " << endl
+            << SIZE_INFO( A* ) << endl
+            << SIZE_INFO( B0* ) << endl
+            << SIZE_INFO( B1* ) << endl
+            << SIZE_INFO( C* ) << endl;
 }
