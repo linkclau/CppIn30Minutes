@@ -1,6 +1,7 @@
 // Danamic greeting
 //
-// Topic: variables, string, using, conditionals (if), function arguments, char, pointers
+// Topic: variables, string, using, conditionals (if), 
+//          function arguments, char, pointers, command line arguments
 //
 // Note: Pre-processed size same as before
 #include <iostream>
