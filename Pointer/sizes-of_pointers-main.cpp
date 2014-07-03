@@ -1,32 +1,37 @@
 #include <iostream>
-#include <string>
 
-#define SIZE_INFO( type ) #type << ": " << sizeof(type) 
+#define SIZE_INFO( type ) #type << ":\t" << sizeof(type) 
 
-using std::string;
 
 struct A {
-    string a_;
+    int a_;
 };
 
-struct BLeft : public A {
-    string b_;
+struct B0 : public A {
+    int b_;
 };
 
-struct BRight : public A {
-    string b_;
+struct B1 : public A {
+    int b_;
 };
 
-struct C : public BLeft, BRight {
-    string c_;
+struct C : public B0, B1 {
+    int c_;
 };
+
+using std::cout;
+using std::endl;
 
 int main()
 {
-    std::cout << SIZE_INFO( int* ) << std::endl;
-    std::cout << SIZE_INFO( void* ) << std::endl;
-    std::cout << SIZE_INFO( A* ) << std::endl;
-    std::cout << SIZE_INFO( BLeft* ) << std::endl;
-    std::cout << SIZE_INFO( BRight* ) << std::endl;
-    std::cout << SIZE_INFO( C* ) << std::endl;
+    cout << SIZE_INFO( int* ) << std::endl;
+    cout << SIZE_INFO( void* ) << std::endl;
+    cout << SIZE_INFO( A* ) << std::endl;
+    cout << SIZE_INFO( A ) << std::endl;
+    cout << SIZE_INFO( B0* ) << std::endl;
+    cout << SIZE_INFO( B0 ) << std::endl;
+    cout << SIZE_INFO( B1* ) << std::endl;
+    cout << SIZE_INFO( B1 ) << std::endl;
+    cout << SIZE_INFO( C* ) << std::endl;
+    cout << SIZE_INFO( C ) << std::endl;
 }
